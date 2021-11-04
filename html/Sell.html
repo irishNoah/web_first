@@ -1,0 +1,273 @@
+<!DOCTYPE>
+<!-- Sell -->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="project-last"> <!-- 프로젝트에 대한 설명 -->
+	<meta name="keywords" content="HTML5, CSS, JQUERY">
+	
+	<link rel="stylesheet" type="text/css" href="../CSS/main.css">
+	
+	<title>리쉬 중고서점</title> <!-- 탭키워드 -->
+	
+	<script type = "text/javascript">
+	
+		var price = "0";
+		
+		if($('purchase01:checked').val() == '5000'){
+			price = "50000";
+		}
+		
+		function calc(){
+			
+			var found = 0;
+			var price = document.getElementsByName("purchase01")
+			for(var i = 0; i< price.length; i++){
+				
+				if(price[i].checked == true)
+					found = price[i].value;
+				
+			}
+			
+			price = document.getElementsByName("purchase02")
+			for(var i = 0; i< price.length; i++){
+				
+				if(price[i].checked == true)
+					found = parseInt(found) + parseInt(price[i].value);
+				
+			}
+			
+			price = document.getElementsByName("purchase03")
+			for(var i = 0; i< price.length; i++){
+				
+				if(price[i].checked == true)
+					found = parseInt(found) + parseInt(price[i].value);
+				
+			}
+			
+			price = document.getElementsByName("purchase04")
+			for(var i = 0; i< price.length; i++){
+				
+				if(price[i].checked == true)
+					found = parseInt(found) + parseInt(price[i].value);
+				
+			}
+			
+			price = document.getElementsByName("purchase05")
+			for(var i = 0; i< price.length; i++){
+				
+				if(price[i].checked == true)
+					found = parseInt(found) + parseInt(price[i].value);
+				
+			}
+			
+			price = document.getElementsByName("purchase06")
+			for(var i = 0; i< price.length; i++){
+				
+				if(price[i].checked == true)
+					found = parseInt(found) + parseInt(price[i].value);
+				
+			}
+	
+			alert("총 구매 가격은 " + found + "원 입니다.");
+		
+		}
+	</script>
+</head>
+
+<body>
+	<div> 
+		<!-- 헤더 영역 -->
+		<!-- 사이트의 소개나 네비게이션 등을 표시하는 영역 -->
+		<header class="header">
+			<p>
+				<a href="../index.html">
+					<img src="../images/homelogo.jpg" width="100px" height="100px">
+				</a>
+				
+				<a href="../index.html">
+					<!-- 여기에 사이트 기준 맨 왼쪽 위에 박힐 홈 로고 사진을 넣어야 함 -->
+					<img src="../images/homelogoTitle.jpg" width="200px" height="100px">
+				</a>
+			</p>
+			
+			
+			<!-- 네비게이션 영역 시작 -->
+			<!-- 사이트의 네비게이션(메뉴) 항목을 표시 -->
+			<nav class="nav">
+				<a href="Sell.html">Sell</a>
+				<a href="Introduce.html">Introduce</a>
+				<a href="NextMonth.html">Next Month</a>
+				<a href="Event.html">Event</a>
+			</nav>
+			<!-- 네이게이션 영역 끝 -->
+		</header>
+	</div>
+	
+	<br>
+	<!-- 총액 계산 버튼 -->
+	<div class="div_Sell">
+		<button onclick = "javascript:calc()">
+			총액 계산
+		</button>
+	</div>
+	
+	<br>
+	<!-- 1번째 책에 대한 가격 및 버튼 -->
+	<div class="div_Sell">
+		<img src="../images/Sell1.jpg"  width = "150px;" height = "200px;" style='margin-right: 100px'>
+		<aside class="aside_Sell">
+			<h2>
+				<font color="black";>
+					제목 : 말의 품격<br>
+					저자 : 이기주<br>
+					출판사 : 황소북스<br>
+					가격 : 5000원
+				</font>
+			</h2>
+			
+			<input type= "radio" name = "purchase01" value = 5000> 구매
+			<input type= "radio" name = "purchase01" value = 0 checked = false> 비구매
+		</aside>
+	</div>
+	
+	<br><br>
+	<!-- 2번째 책에 대한 가격 및 버튼 -->
+	<div class="div_Sell">
+		<img src="../images/Sell2.jpg" width = "150px;"  height = "200px;" style='margin-right: 100px'>
+		<aside class="aside_Sell">
+			<h2>
+				<font color="black";>
+					제목 : 글의 품격<br>
+					저자 : 이기주<br>
+					출판사 : 황소북스<br>
+					가격 : 6000원
+				</font>
+			</h2>
+			
+			<input type= "radio" name = "purchase02" value = 6000> 구매
+			<input type= "radio" name = "purchase02" value = 0 checked = false> 비구매
+		</aside>
+	</div>
+	
+	<br><br>
+	<!-- 3번째 책에 대한 가격 및 버튼 -->
+	<div class="div_Sell">
+		<img src="../images/Sell3.jpg" width = "150px;"  height = "200px;" style='margin-right: 100px'>
+		<aside class="aside_Sell">
+			<h2>
+				<font color="black";>
+					제목 : 언어의 품격<br>
+					저자 : 이기주<br>
+					출판사 : 황소북스<br>
+					가격 : 7000원
+				</font>
+			</h2>
+			
+			<input type= "radio" name = "purchase03" value = 7000> 구매
+			<input type= "radio" name = "purchase03" value = 0 checked = false> 비구매
+		</aside>
+	</div>
+	
+	<br><br>
+	<!-- 4번째 책에 대한 가격 및 버튼 -->
+	<div class="div_Sell">
+		<img src="../images/Sell4.jpg" width = "150px;"  height = "200px;" style='margin-right: 100px'>
+		<aside class="aside_Sell">
+			<h2>
+				<font color="black";>
+					제목 : 미드나잇 라이브러리<br>
+					저자 : 매트 헤이그<br>
+					출판사 : 인플루엔셜<br>
+					가격 : 8000원
+				</font>
+			</h2>
+			
+			<input type= "radio" name = "purchase04" value = 8000> 구매
+			<input type= "radio" name = "purchase04" value = 0 checked = false> 비구매
+		</aside>
+	</div>
+	
+	<br><br>
+	<!-- 5번째 책에 대한 가격 및 버튼 -->
+	<div class="div_Sell">
+		<img src="../images/Sell5.jpg" width = "150px;"  height = "200px;" style='margin-right: 100px'>
+		<aside class="aside_Sell">
+			<h2>
+				<font color="black";>
+					제목 : 밤을 걷는 밤<br>
+					저자 : 유희열<br>
+					출판사 : 위즈덤하우스<br>
+					가격 : 9000원
+				</font>
+			</h2>
+			
+			<input type= "radio" name = "purchase05" value = 9000> 구매
+			<input type= "radio" name = "purchase05" value = 0 checked = false> 비구매
+		</aside>
+	</div>
+	
+	<br><br>
+	<!-- 6번째 책에 대한 가격 및 버튼 -->
+	<div class="div_Sell">
+		<img src="../images/Sell6.jpg" width = "150px;"  height = "200px;" style='margin-right: 100px'>
+		<aside class="aside_Sell">
+			<h2>
+				<font color="black";>
+					제목 : 너는 나의 시절이다<br>
+					저자 : 정지우<br>
+					출판사 : 포르체<br>
+					가격 : 10000원
+				</font>
+			</h2>
+			
+			<input type= "radio" name = "purchase06" value = 10000> 구매
+			<input type= "radio" name = "purchase06" value = 0 checked = false> 비구매
+		</aside>
+	</div>
+	
+	<br>
+	<div class="div_for_aside_Main">
+	  <!-- 오른쪽 설명 구간 시작 -->
+      <aside class="aside_Main">
+            <p>
+               # RISH 중고서점은 운영자가 개인적으로 소유하고 있는 책을 팔고자 만든 사이트입니다.
+               <br>
+			   <br>
+               # 문의 사항은 아래 메일로만 받고 있습니다. 상세 내용은 아래를 참고해주시기 바랍니다.
+			   <br>
+			   <br>
+			   메일 주소 - abc1234@gmail.com<br>
+			   답변 시간 - 11:00am ~ 04:00pm
+			   <br>
+			   <br>
+			   # 아래 계좌로 송금 후<br>
+			   카카오톡 ID : abc1234 를 친구 <br>추가하고<br>
+			   "본인 이름/ 배송지 / 구매하고 싶은 책 이름" 순으로 톡을 보내시면<br>
+			   입금 확인 후 배송 하겠습니다.<br>
+			   <br>
+			   계좌 - 농협000-0000-0000-00<br>
+			   예금주 - 박창영
+			</p>
+      </aside>
+	  <!-- 오른쪽 설명 구간 끝 -->
+   </div>
+	
+   <div>
+	   <footer class="footer">
+				<details>
+					<summary>
+						<font color="white";>Copyright</font>
+					</summary>
+					<p>
+						<font color="white";>이 홈페이지의 저작권은 박창영에게 있습니다.</font>
+					</p>
+				</details>
+		</footer>
+   </div>	
+		
+</body>
+
+
+
+</html>
